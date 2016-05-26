@@ -7,6 +7,10 @@ module.exports = (function(){
       console.log("testing", test);
     },
 
+    find: function(what){
+      console.log("Finding", what);
+    },
+
   };
 
   return travisTester;
