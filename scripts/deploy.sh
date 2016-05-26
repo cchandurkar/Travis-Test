@@ -22,7 +22,7 @@ else
 
   # Copy Files
   cp -r ./docs ./gh-pages
-  cp -a ./dist/. ./gh-pages
+  cp -a ./build/. ./gh-pages
 
   # cd into gh-pages
   cd gh-pages
