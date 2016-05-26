@@ -51,6 +51,17 @@ module.exports = function(grunt) {
       },
     },
 
+    // Documentaion
+    jsdoc : {
+      dist : {
+        src: ['src/**/*.js', 'README.md'],
+        options: {
+            destination : 'docs',
+            template : "node_modules/minami",
+        }
+      }
+    }
+
   });
 
   // Load the plugins
@@ -58,9 +69,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-jsdoc');
 
   // task(s).
   grunt.registerTask('build', ['jshint', 'browserify', 'uglify']);
+  grunt.registerTask('deploy', ['build', 'jsdoc']);
   grunt.registerTask('dev-server', ['build', 'watch']);
 
 };
