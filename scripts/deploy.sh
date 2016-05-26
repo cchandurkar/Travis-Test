@@ -28,6 +28,9 @@ else
   #using token clone gh-pages branch
   git clone --quiet --branch=gh-pages "https://${GITHUB_TOKEN}@${GITHUB_REF}.git"  gh-pages > /dev/null
 
+  # Remove Old Docs
+  rm -rf ./gh-pages/docs/
+
   # Copy Files
   cp -r ./docs ./gh-pages
   cp -a ./build/. ./gh-pages
