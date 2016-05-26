@@ -40,7 +40,7 @@ else
 
   # push
   git add --all
-  git commit -m "Auto generated documentation $TRAVIS_BUILD_NUMBER by Travis"
+  git commit -m "Travis CI: Build $TRAVIS_BUILD_NUMBER - Auto Generated Docs."
   git push -fq origin gh-pages > /dev/null 2>&1
 
   echo "gh-pages updated";
