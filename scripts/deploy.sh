@@ -22,7 +22,7 @@ else
   echo "Name: $COMMIT_AUTHOR_NAME"
 
   # Added
-  git config --global user.name "Travis CI"
+  git config --global user.name "$COMMIT_AUTHOR_NAME"
   git config --global user.email "$COMMIT_AUTHOR_EMAIL"
 
   #using token clone gh-pages branch
