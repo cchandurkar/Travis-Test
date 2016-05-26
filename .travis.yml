@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - '0.12'
+
+script:
+  - bash ./scripts/deploy.sh
+
+env:
+  global:
+  - GITHUB_REF: github.com/cchandurkar/Travis-Test
+  - secure: "gwgQgt9Ryxpu0EFXgQ5XUlGnp4XfgBMMwnpx2d0JGjTovVX4dNUr9uev+UEIdUiKokns4b2XzIsq1zuqOWt0PALgW+L783YJRy06Mi36YvMvtYwjhTI2l6Wub58AqVVy5CawuCjerEtKHRu1v4sVKutHUPCnjdL+AlPBv0f9Lz2reQqldN9TjDaWueEtqQCsNADbWXjZOiWH7YZUZGCQy167c3AvNiXCQx8bxYwuxSFWNfZP5Y9eXrKSOIvbx86DKksIIZjoGNlWZ6/xbTKOoQVgWKmSzdKzO5/aFyiDftsEqdi8qbW18qR+FZ2Cw6P10kfBaOkYyTZeoHYtoqI1fLzgZxjmZSlOIcV4tcjX2xCVz/URAA9tLzDQaQgABrfKx4wGvL7nf3ZuT6QugNh7ygwDq6C2HgTQsfDCgK6ArxINkJDcJ+PL9wOmEWxEtspzFdVUcGE8rn/ZtoJI5r/NM9vE06ISeCsPa1qY3CaPy2T5wqd2EnTGRUfb2Khe3T8T9DdcltBtnObXjcxJ16NMsbZwf/JW5QlowGAEVNKoPVx18VYoEcTvlR3bSwuXPraiuIP51pl4MayX5YSj6LzrKE0J77jJ7pLzV94lYEY+A13DR5b62WO4g2t11Nc8EME9aPMWIeq0JTPwHqdbtCM8sTDiRWjwjjFlDI0L4vrhdao="
