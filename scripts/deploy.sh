@@ -17,6 +17,10 @@ else
   # Build
   npm run build-deploy
 
+  # Added
+  git config user.name "Travis CI"
+  git config user.email "$COMMIT_AUTHOR_EMAIL"
+
   #using token clone gh-pages branch
   git clone --quiet --branch=gh-pages "https://${GITHUB_TOKEN}@${GITHUB_REF}.git"  gh-pages > /dev/null
 
