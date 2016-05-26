@@ -15,7 +15,7 @@ else
   rm -rf build
 
   # Build
-  npm run build
+  npm run build-deploy
 
   #using token clone gh-pages branch
   git clone --quiet --branch=gh-pages "https://${GITHUB_TOKEN}@${GITHUB_REF}.git"  gh-pages > /dev/null

@@ -4,7 +4,9 @@
   "description": "Testing CI service",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "grunt build",
+    "build-deploy": "grunt build && grunt jsdoc",
   },
   "repository": {
     "type": "git",

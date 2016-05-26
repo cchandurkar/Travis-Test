@@ -73,7 +73,6 @@ module.exports = function(grunt) {
 
   // task(s).
   grunt.registerTask('build', ['jshint', 'browserify', 'uglify']);
-  grunt.registerTask('deploy', ['build', 'jsdoc']);
   grunt.registerTask('dev-server', ['build', 'watch']);
 
 };
