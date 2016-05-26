@@ -17,9 +17,13 @@ else
   # Build
   npm run build-deploy
 
+  echo "Configuring Git"
+  echo "Email: $COMMIT_AUTHOR_EMAIL"
+  echo "Name: $COMMIT_AUTHOR_NAME"
+
   # Added
-  git config user.name "Travis CI"
-  git config user.email "$COMMIT_AUTHOR_EMAIL"
+  git config --global user.name "Travis CI"
+  git config --global user.email "$COMMIT_AUTHOR_EMAIL"
 
   #using token clone gh-pages branch
   git clone --quiet --branch=gh-pages "https://${GITHUB_TOKEN}@${GITHUB_REF}.git"  gh-pages > /dev/null
