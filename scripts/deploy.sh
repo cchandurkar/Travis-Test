@@ -17,10 +17,6 @@ else
   # Build
   npm run build-deploy
 
-  echo "Configuring Git"
-  echo "Email: $COMMIT_AUTHOR_EMAIL"
-  echo "Name: $COMMIT_AUTHOR_NAME"
-
   # Added
   git config --global user.name "$COMMIT_AUTHOR_NAME"
   git config --global user.email "$COMMIT_AUTHOR_EMAIL"
