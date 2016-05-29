@@ -10,6 +10,7 @@ module.exports = function(grunt) {
     browserify: {
       core: {
         options: {
+          transforms:[["babelify", { "stage": 0 }]],
           browserifyOptions: {
             standalone: 'travisTester'
           }
@@ -44,7 +45,7 @@ module.exports = function(grunt) {
     // jshint
     jshint: {
       options: {
-        loopfunc: true
+        jshintrc: '.jshintrc'
       },
       all: {
         src: ['./index.js', './src/**/*.js'],
@@ -72,7 +73,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jsdoc');
 
   // task(s).
-  grunt.registerTask('build', ['jshint', 'browserify', 'uglify']);
+  grunt.registerTask('build', ['jshint', 'browserify'/*, 'uglify'*/]);
   grunt.registerTask('dev-server', ['build', 'watch']);
 
 };

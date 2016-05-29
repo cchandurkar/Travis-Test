@@ -1,18 +1,25 @@
 
 module.exports = (function(){
 
-  var travisTester = {
+  // Use Strict
+  'use strict';
 
-    test: function(test){
-      console.log("testing", test);
+  // Operation Map
+  let opMap = new Map();
+  opMap.set('+', (x, y) => x + y);
+  opMap.set('*', (x, y) => x * y);
+  opMap.set('-', (x, y) => x - y);
+  opMap.set('/', (x, y) => x / y);
+  opMap.set('%', (x, y) => x % y);
+
+  // Travis Tester
+  let travisTester = {
+    compute: (a, operator, b) => {
+      return opMap.has(operator) ? opMap.get(operator).call(this, a, b) : null;
     },
-
-    find: function(what){
-      console.log("Finding", what);
-    },
-
   };
 
+  // Export
   return travisTester;
 
 }());
