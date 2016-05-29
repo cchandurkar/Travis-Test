@@ -14,9 +14,7 @@ module.exports = (function(){
 
   // Travis Tester
   let travisTester = {
-    compute: (a, operator, b) => {
-      return opMap.has(operator) ? opMap.get(operator).call(this, a, b) : null;
-    },
+    compute: (a, operator, b) => opMap.has(operator) ? opMap.get(operator).call(this, a, b) : null,
   };
 
   // Export

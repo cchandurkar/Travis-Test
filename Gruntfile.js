@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     browserify: {
       core: {
         options: {
-          transforms:[["babelify", { "stage": 0 }]],
+          transform:[["babelify", { "presets": ["es2015"] }]],
           browserifyOptions: {
             standalone: 'travisTester'
           }
